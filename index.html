@@ -3,7 +3,8 @@
 <script>
   var worker=new Worker('worker.js');
   worker.postMessage('calcula');
-  worker.addEventListener('message',function(ev){
+  worker.addEventListener('message',ev=>{
     document.querySelector('#resultat').innerHTML=ev.data;
   });
 </script>
+<hr>
